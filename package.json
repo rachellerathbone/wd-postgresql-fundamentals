@@ -1,0 +1,37 @@
+{
+  "name": "wd-postgresql-fundamentals",
+  "version": "0.1.0",
+  "description": "Solve puzzles to master PostgreSQL fundamentals",
+  "main": "lib/part4.js",
+  "scripts": {
+    "knex": "knex",
+    "lint": "eslint .",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryansobol/wd-postgresql-fundamentals.git"
+  },
+  "keywords": [
+    "pg",
+    "postgresql",
+    "fundamentals"
+  ],
+  "author": "Ryan Sobol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryansobol/wd-postgresql-fundamentals/issues"
+  },
+  "homepage": "https://github.com/ryansobol/wd-postgresql-fundamentals#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "knex": "^0.11.5",
+    "mocha": "^2.5.3",
+    "pg": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.6.0",
+    "eslint-config-ryansobol": "^9.1.1"
+  }
+}
