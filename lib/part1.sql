@@ -23,6 +23,7 @@ id         | an auto-incrementing integer
 name       | a string of varying length up to 255 characters
 kind       | a string of varying length up to 255 characters
 bio        | a string of unlimited length
+dollars    | an integer
 opened_at  | a timestamp that includes a time zone
 created_at | a timestamp that includes a time zone
 updated_at | a timestamp that includes a time zone
@@ -96,6 +97,7 @@ customer id      | an integer that cannot be null
 restaurant_id    | an integer that cannot be null
 wants_vegetarian | a true or false value
 wants_gluten_free| a true or false value
+confirmed_at     | a timestamp that includes a time zone
 created_at       | a timestamp that includes a time zone
 updated_at       | a timestamp that includes a time zone
 */
