@@ -27,7 +27,16 @@ opened_at  | a timestamp that includes a time zone
 created_at | a timestamp that includes a time zone
 updated_at | a timestamp that includes a time zone
 */
-
+CREATE TABLE restaurants (
+  id serial,
+  name varchar(255),
+  kind varchar(255),
+  dollars integer,
+  bio text,
+  opened_at timestamp with time zone,
+  created_at timestamp with time zone,
+  updated_at timestamp with time zone
+);
 
 /* Exercise createTableLocations
 Create a locations table with the following columns.
@@ -42,6 +51,17 @@ phone      | a string of varying length up to 255 characters
 created_at | a timestamp that includes a time zone
 updated_at | a timestamp that includes a time zone
 */
+CREATE TABLE locations (
+  id serial,
+  name varchar(255),
+  street varchar(255),
+  city varchar(255),
+  state varchar(255),
+  zip varchar(255),
+  phone varchar(255),
+  created_at timestamp with time zone,
+  updated_at timestamp with time zone
+);
 
 
 /* Exercise createTableDishes
@@ -57,7 +77,17 @@ gluten_free_at | a timestamp that includes a time zone
 created_at     | a timestamp that includes a time zone
 updated_at     | a timestamp that includes a time zone
 */
-
+CREATE TABLE dishes (
+  id serial,
+  restaurant_id integer NOT NULL,
+  name varchar(255),
+  description text,
+  cost numeric(8, 2),
+  vegetarian_at timestamp with time zone,
+  gluten_free_at timestamp with time zone,
+  created_at timestamp with time zone,
+  updated_at timestamp with time zone
+);
 
 /* Exercise createTableReservations
 Create a reservations table with the following columns.
@@ -69,7 +99,16 @@ wants_gluten_free| a true or false value
 created_at       | a timestamp that includes a time zone
 updated_at       | a timestamp that includes a time zone
 */
-
+CREATE TABLE reservations (
+  id serial,
+  customer_id integer NOT NULL,
+  restaurant_id integer NOT NULL,
+  wants_vegetarian boolean,
+  wants_gluten_free boolean,
+  confirmed_at timestamp with time zone,
+  created_at timestamp with time zone,
+  updated_at timestamp with time zone
+);
 
 /* Exercise createTableReviews
 Create a reviews table with the following columns.
@@ -82,3 +121,12 @@ comment       | a string of unlimited length
 created_at    | a timestamp that includes a time zone
 updated_at    | a timestamp that includes a time zone
 */
+CREATE TABLE reviews (
+  id serial,
+  customer_id integer NOT NULL,
+  restaurant_id integer NOT NULL,
+  rating integer,
+  comment text,
+  created_at timestamp with time zone,
+  updated_at timestamp with time zone
+);
