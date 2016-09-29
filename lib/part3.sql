@@ -68,6 +68,8 @@ FROM reviews
 INNER JOIN restaurants ON restaurants.id = reviews.restaurant_id
 INNER JOIN customers ON customers.id = reviews.customer_id
 WHERE rating < '4';
+
+-- WHERE CAST(reviews.rating AS INT) < 4;
 -- ALTER TABLE reviews ALTER COLUMN rating TYPE integer;
 
 /* Exercise getGlutenFreeDishes
