@@ -56,5 +56,10 @@ module.exports.seed = function(knex) {
         created_at: new Date('2000-05-20 00:00:00 UTC'),
         updated_at: new Date('2000-05-20 00:00:00 UTC')
       });
+    })
+    .then(() => {
+      return knex.raw(
+        "SELECT setval('customers_id_seq', (SELECT MAX(id) FROM customers));"
+      );
     });
 };
