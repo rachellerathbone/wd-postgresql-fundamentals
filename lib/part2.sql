@@ -110,6 +110,6 @@ Delete restaurants with more than 2 dollar signs.
 */
 
 
-/* Exercise deleteAllNonVegetarianDishes
-Delete all non-vegetarian dishes
+/* Exercise deleteAllVegetarianDishes
+Delete all vegetarian dishes
 */

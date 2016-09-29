@@ -525,8 +525,8 @@ suite(env, () => {
       });
   });
 
-  test('delete all non vegetarian dishes', (done) => {
-    knex.raw(sql.deleteAllNonVegetarianDishes)
+  test('delete all vegetarian dishes', (done) => {
+    knex.raw(sql.deleteAllVegetarianDishes)
       .then((result) => {
         const actual = result.rowCount;
         const expected = 2;
