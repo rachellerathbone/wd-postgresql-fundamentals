@@ -8,37 +8,37 @@ SELECT * FROM restaurants;
 Select the names of all the restaurants.
 */
 
-SELECT name FROM restaurants
+SELECT name FROM restaurants;
 
 /* Exercise selectAllCustomerNames
 Select the names of all the customers.
 */
 
-SELECT name FROM customers
+SELECT name FROM customers;
 
 /* Exercise selectCustomerById
 Select all columns of a single customer with an id of 1.
 */
 
-SELECT * FROM customers WHERE id = 1
+SELECT * FROM customers WHERE id = 1;
 
 /* Exercise selectLocationById
 Select all columns of a single location with an id of 3.
 */
 
-SELECT * FROM locations WHERE id = 3
+SELECT * FROM locations WHERE id = 3;
 
 /* Exercise selectCountOfAllLocationsByCity
 Select the count of all the locations by city.
 */
 
-SELECT COUNT(city) FROM locations
+SELECT COUNT(city) FROM locations;
 
 /* Exercise selectDistinctCountOfAllLocationsByCity
 Select the count of all the unique cities with locations.
 */
 
-SELECT COUNT(DISTINCT city) FROM locations
+SELECT COUNT(DISTINCT city) FROM locations;
 
 /* Exercise selectCheapestDish
 Select all columns the cheapest dish
